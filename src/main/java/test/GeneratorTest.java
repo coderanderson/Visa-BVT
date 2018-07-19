@@ -18,7 +18,7 @@ public class GeneratorTest {
                 "\"check_location\""
         };
         List<String> keys = Arrays.asList(keyArray);
-        List<List<String>> values = new ArrayList<List<String>>();
+
         String[] value0Array = new String[]{
                 "null",
                 "100",
@@ -46,23 +46,22 @@ public class GeneratorTest {
                 "false",
                 ""
         };
-        List<String> values0 = Arrays.asList(value0Array);
-        List<String> values1 = Arrays.asList(value1Array);
-        List<String> values2 = Arrays.asList(value2Array);
-        List<String> values3 = Arrays.asList(value3Array);
-        List<String> values4 = Arrays.asList(value4Array);
-        List<String> values5 = Arrays.asList(value5Array);
-        values.add(values0);
-        values.add(values1);
-        values.add(values2);
-        values.add(values3);
-        values.add(values4);
-        values.add(values5);
-        List<String> res = mg.generateResultList(keys, values);
-        for (String s: res) {
-            System.out.println(s);
-        }
+
+        List<List<String>> values = Arrays.asList(Arrays.asList(value0Array), Arrays.asList(value1Array),
+                Arrays.asList(value2Array), Arrays.asList(value3Array),
+                Arrays.asList(value4Array), Arrays.asList(value5Array));
+
+        List<String> envValues0 = mg.generateResultList(keys, values);
+        List<String> envValues1 = Arrays.asList("\"93\"", "\"94\"");
+
+        //List<List<String>> envValues = Arrays.asList(envValues0, envValues1);
+        //List<String> envNames = Arrays.asList("body", "beaconid");
+
+        List<List<String>> envValues = Arrays.asList(envValues0);
+        List<String> envNames = Arrays.asList("body");
+
         JSONGenerator jsonGenerator = new JSONGenerator();
-        jsonGenerator.generate(res, "body");
+        //jsonGenerator.generate(res, "body");
+        jsonGenerator.generate(envNames, envValues);
     }
 }
