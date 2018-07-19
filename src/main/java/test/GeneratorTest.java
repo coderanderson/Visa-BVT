@@ -26,7 +26,8 @@ public class GeneratorTest {
         };
         String[] value1Array = new String[]{
                 "\"eUID\"",
-                "\"iBcn\""
+                "\"iBcn\"",
+                "\"aaa\""
         };
         String[] value2Array = new String[]{
                 "\"D9B9EC1F-3925-43D0-80A9-1E39D4CEA95C\"",
@@ -52,16 +53,12 @@ public class GeneratorTest {
                 Arrays.asList(value4Array), Arrays.asList(value5Array));
 
         List<String> envValues0 = mg.generateResultList(keys, values);
-        List<String> envValues1 = Arrays.asList("\"93\"", "\"94\"");
+        List<String> envValues1 = Arrays.asList("\"93\"", "\"94\"", "\"50\"", "\"200\"");
 
-        //List<List<String>> envValues = Arrays.asList(envValues0, envValues1);
-        //List<String> envNames = Arrays.asList("body", "beaconid");
-
-        List<List<String>> envValues = Arrays.asList(envValues0);
-        List<String> envNames = Arrays.asList("body");
+        List<List<String>> envValues = Arrays.asList(envValues0, envValues1);
+        List<String> envNames = Arrays.asList("body", "beaconid");
 
         JSONGenerator jsonGenerator = new JSONGenerator();
-        //jsonGenerator.generate(res, "body");
         jsonGenerator.generate(envNames, envValues);
     }
 }
