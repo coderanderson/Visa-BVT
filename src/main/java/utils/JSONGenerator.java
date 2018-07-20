@@ -8,7 +8,8 @@ public class JSONGenerator {
 
     public void generate(List<String> envNames, List<List<String>> envValues) throws IOException{
         String s = generateString(envNames, envValues);
-        FileWriter writer = new FileWriter("/Users/mzong/Desktop/test.json");
+        FileWriter writer = new FileWriter("c:\\Users\\mzong\\Desktop\\test.json");
+        System.out.println(s);
         writer.write(s);
         writer.close();
     }
