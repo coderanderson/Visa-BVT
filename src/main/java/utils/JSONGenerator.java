@@ -6,9 +6,9 @@ import java.util.*;
 
 public class JSONGenerator {
 
-    public void generate(List<String> envNames, List<List<String>> envValues) throws IOException{
+    public void generate(List<String> envNames, List<List<String>> envValues, String outputPath) throws IOException{
         String s = generateString(envNames, envValues);
-        FileWriter writer = new FileWriter("c:\\Users\\mzong\\Desktop\\test.json");
+        FileWriter writer = new FileWriter(outputPath);
         System.out.println(s);
         writer.write(s);
         writer.close();
