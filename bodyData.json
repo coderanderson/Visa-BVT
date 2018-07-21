@@ -1,0 +1,30 @@
+{
+	"\"attachment_id\"": [
+		"null",
+		"100",
+		"200"
+	],
+	"\"beacon_type\"": [
+		"\"eUID\"",
+        "\"iBcn\"",
+        "\"aaa\""
+	],
+	"\"uuid\"": [
+		"\"D9B9EC1F-3925-43D0-80A9-1E39D4CEA95C\"",
+        "\"D9B9EC1F4CEA95C\"",
+        "12345"
+	],
+	"\"major\"": [
+		"\"B9407F3025556B57FE6D\"",
+        "\"asidjfiajdf\""
+	],
+	"\"minor\"": [
+		"\"F5F8466EAFF9\"",
+        "\"oidjfidjfi\""
+	],
+	"\"check_location\"": [
+		"true",
+        "false",
+        ""
+	]
+}
