@@ -11,6 +11,6 @@ public class BodyJSONParserTest {
         List<String> keyList = new ArrayList<String>();
         List<List<String>> valueLists = new ArrayList<List<String>>();
         BodyJSONParser bodyJSONParser = new BodyJSONParser();
-        bodyJSONParser.parseToList(pathName, keyList, valueLists);
+        //bodyJSONParser.parseToList(pathName, keyList, valueLists);
     }
 }
