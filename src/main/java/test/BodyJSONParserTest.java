@@ -7,10 +7,10 @@ import java.util.List;
 
 public class BodyJSONParserTest {
     public static void main(String[] args) throws Exception{
-        String pathName = "C:\\Users\\mzong\\Desktop\\bodyData.json";
+        String pathName = "C:\\Users\\mzong\\Desktop\\itineraryBody.json";
         List<String> keyList = new ArrayList<String>();
         List<List<String>> valueLists = new ArrayList<List<String>>();
         BodyJSONParser bodyJSONParser = new BodyJSONParser();
-        //bodyJSONParser.parseToList(pathName, keyList, valueLists);
+        bodyJSONParser.parseToList(pathName, keyList, valueLists);
     }
 }
