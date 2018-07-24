@@ -10,11 +10,11 @@ public class GeneratorTest {
         BodyJSONParser bodyJSONParser = new BodyJSONParser();
 
         List<String> envValues0 = bodyJSONParser.generateList("bodyData.json");
-        List<String> envValues1 = Arrays.asList("\"93\"", "\"94\"", "\"50\"", "\"200\"");
-        List<String> envValues2 = bodyJSONParser.generateList("c:\\Users\\mzong\\Desktop\\itineraryBody.json");
+        //List<String> envValues2 = Arrays.asList("\"Old offer\"", "\"Very good offer\"", "100");
+        List<String> envValues1 = bodyJSONParser.generateList("attachmentPatchBody.json");
 
-        List<List<String>> envValues = Arrays.asList(envValues0, envValues1, envValues2);
-        List<String> envNames = Arrays.asList("body", "beaconid", "itineraryBody");
+        List<List<String>> envValues = Arrays.asList(envValues0, envValues1);
+        List<String> envNames = Arrays.asList("body", "attachmentPatchBody");
 
         JSONGenerator jsonGenerator = new JSONGenerator();
         jsonGenerator.generate(envNames, envValues, "c:\\Users\\mzong\\Desktop\\test.json");
